@@ -1,0 +1,26 @@
+* emms-player-mpv-volume.el
+
+** What is it ?
+
+  This is an extension of emms-player-mpv.el for volume control.
+
+** Requirements
+
+   + EMMS ( [[https://www.gnu.org/software/emms/]] )
+   + emms-player-mpv.el ( [[https://github.com/dochang/emms-player-mpv]] )
+
+** Usage
+
+   #+BEGIN_SRC emacs-lisp
+     (add-list 'load-path "path/to/emms-player-mpv-volume")
+     (require 'emms-player-mpv-volume)
+     ;; To use functions in emms-volume.el for mpv
+     (custom-set-variables
+      '(emms-volume-change-function #'emms-player-mpv-volume-change))
+   #+END_SRC
+
+   You can also use the following functions.
+
+   ~M-x emms-player-mpv-volume-set RET n RET~  sets the volume to n.
+
+   ~M-x emms-player-mpv-volume-mute~  toggles mute status.
